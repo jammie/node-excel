@@ -1,8 +1,15 @@
 {
-	"author": [
-		"Tom Smith <tom@iamsmith.co.uk>",
-		"Adam Duncan <adam.duncan@clock.co.uk>",
-	],
+	"author": "Tom Smith <tom@iamsmith.co.uk>",
+	"contributors": [
+    {
+      "name": "Tom Smith",
+      "email": "tom@iamsmith.co.uk"
+    },
+    {
+      "name": "Adam Duncan",
+      "email": "adam.duncan@clock.co.uk"
+    }
+  ],
 	"name": "node-excel",
 	"description": "MS Excel module for NodeJs",
 	"version": "0.0.1",
