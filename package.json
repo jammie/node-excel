@@ -1,0 +1,26 @@
+{
+	"author": [
+		"Tom Smith <tom@iamsmith.co.uk>",
+		"Adam Duncan <adam.duncan@clock.co.uk>",
+	],
+	"name": "node-excel",
+	"description": "MS Excel module for NodeJs",
+	"version": "0.0.1",
+	"tags": [],
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:IamSmith/node-excel.git"
+	},
+	"main": "",
+	"scripts": {
+		"test": "mocha -r should -R List "
+	},
+	"engines": {
+		"node": ">0.4.0"
+	},
+	"dependencies": {
+		"mocha": "*",
+		"should": "*"
+	},
+	"devDependencies": {}
+}
