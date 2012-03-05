@@ -20,7 +20,7 @@
 	},
 	"main": "",
 	"scripts": {
-		"test": "mocha -r should"
+		"test": "mocha -r should -R spec"
 	},
 	"engines": {
 		"node": ">0.4.0"
