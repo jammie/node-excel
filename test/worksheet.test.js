@@ -59,4 +59,16 @@ describe('Worksheet', function() {
 		it('return a nodeExcel object');
 	});
 
+	describe('#getInvalidTitleCharacters()', function() {
+		it('todo');
+	});
+
+	describe('#getTitle()', function() {
+		it('todo');
+	});
+
+	describe('#disconnectCells()', function() {
+		it('todo');
+	});
+
 });
