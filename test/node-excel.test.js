@@ -18,4 +18,13 @@ describe('node-excel', function() {
 		});
 	});
 
+	describe('#getSheetCount()', function() {
+		it('return the number of worksheets in the current workbook');
+	});
+
+	describe('#getSheetByName()', function() {
+		it('return a worksheet object with a valid name');
+		it('return null for a non existent name');
+	});
+
 });
