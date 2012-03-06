@@ -1,6 +1,6 @@
 var nodeExcel = require('../lib/NodeExcel');
 
-describe('node-excel', function() {
+describe('Node Excel', function() {
 
 	describe('#create()', function() {
 		it('creates a new NodeExcel object', function() {

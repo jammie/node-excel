@@ -1,7 +1,8 @@
 var
 	nodeExcel = require('../lib/NodeExcel'),
 	worksheet = require('../lib/Worksheet');
-describe('worksheet', function() {
+
+describe('Worksheet', function() {
 
 	describe('#create()', function() {
 
@@ -52,6 +53,10 @@ describe('worksheet', function() {
 				true.should.be.ok;
 			}
 		});
+	});
+
+	describe('#getParent()', function() {
+		it('return a nodeExcel object');
 	});
 
 });
