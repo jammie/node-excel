@@ -32,6 +32,9 @@ describe('worksheet', function() {
 			title.should.be.equal('my sheet');
 		});
 
+		it('returns a worksheet with a valid name of a sheet that already exists with a number added.');
+		it('returns a worksheet with a valid name(31 characters) of a sheet that already exists truncated');
+
 		it('throws an error when a invalid character is used for the title', function() {
 			try {
 				newWorkSheet = newWorkSheet.setTitle('my sheet *');
