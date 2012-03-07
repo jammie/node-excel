@@ -13,6 +13,26 @@ describe('Worksheet', function() {
 		});
 	});
 
+	describe('#disconnectCells()', function() {
+		it('todo');
+	});
+
+	describe('#getCellCacheController()', function() {
+		it('todo');
+	});
+
+	describe('#getInvalidTitleCharacters()', function() {
+		it('todo');
+	});
+
+	describe('#getParent()', function() {
+		it('return a nodeExcel object');
+	});
+
+	describe('#getTitle()', function() {
+		it('todo');
+	});
+
 	describe('#setTitle()', function() {
 		var excel;
 		var newWorkSheet;
@@ -54,21 +74,4 @@ describe('Worksheet', function() {
 			}
 		});
 	});
-
-	describe('#getParent()', function() {
-		it('return a nodeExcel object');
-	});
-
-	describe('#getInvalidTitleCharacters()', function() {
-		it('todo');
-	});
-
-	describe('#getTitle()', function() {
-		it('todo');
-	});
-
-	describe('#disconnectCells()', function() {
-		it('todo');
-	});
-
 });
