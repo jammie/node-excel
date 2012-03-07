@@ -1,4 +1,4 @@
-describe('Protection', function() {
+describe('WS - Protection', function() {
 
 	describe('#create()', function() {
 		it('todo');

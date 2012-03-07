@@ -1,4 +1,4 @@
-describe('Page Setup', function() {
+describe('WS - Page Setup', function() {
 
 	describe('#create()', function() {
 		it('todo');

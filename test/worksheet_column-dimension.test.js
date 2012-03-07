@@ -1,4 +1,4 @@
-describe('Column Dimension', function() {
+describe('WS - Column Dimension', function() {
 
 	describe('#create()', function() {
 		it('todo');
