@@ -27,7 +27,8 @@
 	},
 	"dependencies": {
 		"mocha": "*",
-		"should": "*"
+		"should": "*",
+		"underscore": ">=1.2.2"
 	},
 	"devDependencies": {}
 }
