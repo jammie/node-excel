@@ -74,4 +74,63 @@ describe('Node Excel', function() {
 	});
 
 
+	describe('#addExternalSheet()', function() {
+		it('return newly added sheet if a sheet does not already exist with the same name');
+		it('throws an error when the new sheet has the same name as an exisiting sheet');
+	});
+
+	describe('#addNamedRange()', function() {
+		it('return true after adding a new named range');
+	});
+
+	describe('#getNamedRange()', function() {
+		it('return specified named range');
+	});
+
+	describe('#removedNamedRange()', function() {
+		it('return node-excel object after removing specified named range');
+	});
+
+	describe('#getCellXfByIndex()', function() {
+		it('return cellXf at specified index');
+	});
+
+	describe('#getCellXfByHashCode()', function() {
+		it('return cellXf which has the specifed hashcode');
+		it('return false if no cellXf found with specifed hashcode');
+	});
+
+	describe('#getDefaultStyle()', function() {
+		it('return default style if set');
+		it('throw error if no default style set');
+	});
+
+	describe('#addCellXf()', function() {
+		it('add new cellXf and update cellXf index');
+	});
+
+	describe('#removeCellXfByIndex()', function() {
+		it('removes the cellXf at the specified index and updates all cellXf indexes');
+		it('throw error if specified index does not exist');
+	});	
+
+	describe('#getCellStyleXfByIndex()', function() {
+		it('return cellStyleXf at specified index');
+	});
+
+
+	describe('#getCellStyleXfByHashCode()', function() {
+		it('return cellStyleXf which has the specifed hashcode');
+		it('return false if no cellStyleXf found with specifed hashcode');
+	});
+
+	describe('#removeCellStyleXfByIndex()', function() {
+		it('removes the cellStyleXf at the specified index');
+		it('throw error if specified index does not exist');
+	});
+
+	describe('#garbageCollect()', function() {
+		it('removes all unneeded cellXf and updates the index for all cells and columns in the workbook');
+	});
+
 });
