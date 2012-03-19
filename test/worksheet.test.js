@@ -4,6 +4,14 @@ var
 
 describe('Worksheet', function() {
 
+	var excel;
+	var newWorkSheet;
+
+	beforeEach(function() {
+		excel = nodeExcel.create();
+		newWorkSheet = worksheet.create(excel);
+	});
+
 	describe('#create()', function() {
 
 		it('returns an empty worksheet', function() {
@@ -22,7 +30,11 @@ describe('Worksheet', function() {
 	});
 
 	describe('#getInvalidTitleCharacters()', function() {
-		it('todo');
+		it('returns an array of invalid title characters', function() {
+			var characters = newWorkSheet.getInvalidTitleCharacters();
+			characters.should.be.an.instanceof(Array);
+			characters.should.eql(['*', ':', '/', '\\', '?', '[', ']']);
+		});
 	});
 
 	describe('#getParent()', function() {
@@ -30,17 +42,15 @@ describe('Worksheet', function() {
 	});
 
 	describe('#getTitle()', function() {
-		it('todo');
+
+		it('returns worksheet object with new title when a new title is set', function() {
+			newWorkSheet = newWorkSheet.setTitle('my sheet');
+			var title = newWorkSheet.getTitle();
+			title.should.be.equal('my sheet');
+		});
 	});
 
 	describe('#setTitle()', function() {
-		var excel;
-		var newWorkSheet;
-
-		beforeEach(function() {
-			excel = nodeExcel.create();
-			newWorkSheet = worksheet.create(excel);
-		});
 
 		it('returns worksheet object when same name passed in', function() {
 			newWorkSheet = newWorkSheet.setTitle('sheet');
@@ -57,21 +67,15 @@ describe('Worksheet', function() {
 		it('returns a worksheet with a valid name(31 characters) of a sheet that already exists truncated');
 
 		it('throws an error when a invalid character is used for the title', function() {
-			try {
+			(function() {
 				newWorkSheet = newWorkSheet.setTitle('my sheet *');
-				false.should.be.ok;
-			} catch (error) {
-				true.should.be.ok;
-			}
+			}).should.throw(/^Invalid character found in sheet title/);
 		});
 
 		it('throws an error when a title of more than 31 characters is used', function() {
-			try {
+			(function() {
 				newWorkSheet = newWorkSheet.setTitle('my sheet title is longer than 31 characters so will throw an error');
-				false.should.be.ok;
-			} catch (error) {
-				true.should.be.ok;
-			}
+			}).should.throw('Maximum 31 characters allowed in sheet title.');
 		});
 	});
 
